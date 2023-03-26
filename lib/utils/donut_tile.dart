@@ -57,7 +57,7 @@ class DonutTile extends StatelessWidget {
             // imagem do donut
             Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12),
+                  const EdgeInsets.symmetric(horizontal: 36.0, vertical: 16),
               child: Image.asset(imageName),
             ),
 
@@ -74,10 +74,29 @@ class DonutTile extends StatelessWidget {
             ),
             Text(
               'Dunkins',
-              style: TextStyle(color: Colors.grey[700]),
+              style: TextStyle(color: Colors.grey[600]),
             ),
 
             // botão de favorito e de adicionar
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // icone de favorito
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.pink[400],
+                  ),
+
+                  // icone de adicionar
+                  Icon(
+                    Icons.add,
+                    color: Colors.grey[400],
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
