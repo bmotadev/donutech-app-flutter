@@ -6,18 +6,21 @@ class DonutTab extends StatelessWidget {
   // lista de Donuts
   List donutsOnSale = [
     // [ donutFlavor, donutPrice, donutColor, imageName]
-    ["Ice Cream", "26", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "39", Colors.red, "lib/images/strawberry_donuts.png"],
-    ["Grape Ape", "63", Colors.purple, "lib/images/grape_donuts.png"],
-    ["Choco", "72", Colors.brown, "lib/images/chocolate_donut.png"]
+    ["Ice Cream", "26", Colors.blue, "assets/images/icecream_donut.png"],
+    ["Strawberry", "39", Colors.red, "assets/images/strawberry_donut.png"],
+    ["Grape Ape", "63", Colors.purple, "assets/images/grape_donut.png"],
+    ["Choco", "72", Colors.brown, "assets/images/chocolate_donut.png"]
   ];
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       itemCount: donutsOnSale.length,
-      gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      padding: EdgeInsets.all(12),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 1 / 1.5,
+      ),
       itemBuilder: (context, index) {
         return DonutTile(
           donutFlavor: donutsOnSale[index][0],
