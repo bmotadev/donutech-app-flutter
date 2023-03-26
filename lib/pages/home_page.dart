@@ -17,17 +17,20 @@ class _HomePageState extends State<HomePage> {
     ),
     // tab burger
     MyTab(
-      iconPath: 'assets/icons/donut.png',
+      iconPath: 'assets/icons/burger.png',
     ),
     // tab smoothie
     MyTab(
-      iconPath: 'assets/icons/donut.png',
+      iconPath: 'assets/icons/smoothie.png',
     ),
     // tab panqueca
     MyTab(
-      iconPath: 'assets/icons/donut.png',
+      iconPath: 'assets/icons/pancakes.png',
     ),
     // tab pizza
+    MyTab(
+      iconPath: 'assets/icons/pizza.png',
+    ),
   ];
 
   @override
@@ -95,7 +98,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // aba da barra
-            TabBar(tabs: myTabs)
+            TabBar(tabs: myTabs),
             // aba da barra view
           ],
         ),
