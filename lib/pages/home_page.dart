@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 24),
                   ),
                   Text(
-                    'EAT',
+                    ' EAT',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
             // aba da barra
             TabBar(tabs: myTabs),
             // aba da barra view
-            const Expanded(
+            Expanded(
               child: TabBarView(children: [
                 // donut page
                 DonutTab(),
