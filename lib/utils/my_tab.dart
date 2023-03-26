@@ -10,7 +10,15 @@ class MyTab extends StatelessWidget {
     return Tab(
       height: 80,
       child: Container(
-        child: Image.asset(iconPath, color: Colors.grey[600]),
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Image.asset(
+          iconPath,
+          color: Colors.grey[600],
+        ),
       ),
     );
   }

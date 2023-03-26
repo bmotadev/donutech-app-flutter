@@ -1,6 +1,12 @@
 import 'package:donutech_appui/utils/my_tab.dart';
 import 'package:flutter/material.dart';
 
+import '../tab_pages/burger_tab.dart';
+import '../tab_pages/donut_tab.dart';
+import '../tab_pages/pancake_tab.dart';
+import '../tab_pages/pizza_tab.dart';
+import '../tab_pages/smoothie_tab.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -10,7 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // my tabs
-  List<Widget> myTabs = [
+  List<Widget> myTabs = const [
     // tab donut
     MyTab(
       iconPath: 'assets/icons/donut.png',
@@ -100,6 +106,24 @@ class _HomePageState extends State<HomePage> {
             // aba da barra
             TabBar(tabs: myTabs),
             // aba da barra view
+            const Expanded(
+              child: TabBarView(children: [
+                // donut page
+                DonutTab(),
+
+                // burger p age
+                BurgerTab(),
+
+                // smoothie page
+                SmoothieTab(),
+
+                // pancake page
+                PancakeTab(),
+
+                // pizza page
+                PizzaTab(),
+              ]),
+            ),
           ],
         ),
       ),
